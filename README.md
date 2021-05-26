@@ -6,4 +6,8 @@ A prototype bot implemented using the relative new Slack Bolt framework for Pyth
 
 # Functions
 1. Provid polls using provided Emojis
-'tsk poll ("Thumbsup or thumbsdown? Add reactions to answer", :thumbsup:, :thumbsdown:)'
+
+
+`tsk poll ("Thumbsup or thumbsdown? Add reactions to answer", :thumbsup:, :thumbsdown:)`
+
+
