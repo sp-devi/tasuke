@@ -13,13 +13,17 @@ app = App(
     signing_secret=os.environ.get("SLACK_SIGNING_SECRET"),
 )
 
+
 def clean_emoji(emoji):
     return emoji.replace(":", "").replace('"', "").strip()
+
 
 @app.message("tsk poll")
 def ask_who(message, say, client, logger):
     try:
         logger.info(message)
+
+        # Parse message
         outerGroup = re.compile("\((.+)\)")
         pollMsgMatch = outerGroup.search(message["text"])
         pollMsg = pollMsgMatch.group(1)
@@ -29,7 +33,7 @@ def ask_who(message, say, client, logger):
         channel_id = message["channel"]
         response = client.chat_postMessage(
             channel=channel_id,
-            text="*{}* _poll created by {}._".format(msgBody[0], message['user'])
+            text="*{}* _poll created by {}._".format(msgBody[0], message["user"]),
         )
 
         channel_id = response["channel"]
