@@ -2,7 +2,7 @@
 a Slack bot
 
 # Introduction
-A prototype bot implemented using the relative new Slack Bolt framework for Python.
+A prototype bot implemented using the relatively new Slack Bolt framework for Python.
 
 # Functions
 1. Provide polls using provided Emojis
